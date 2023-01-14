@@ -33,4 +33,4 @@ jobs:
                 file: ./web/Dockerfile
                 builder: ${{ steps.buildx.outputs.name }}
                 push: true
-                tags: dmac23/devops-project
+                tags: dmac23/devops-project:my_docker1
