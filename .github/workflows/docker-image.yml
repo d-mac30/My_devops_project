@@ -30,7 +30,7 @@ jobs:
             uses: docker/build-push-action@v2
             with:
                 context: ./
-                file: ./Dockerfile
+                file: ./web/Dockerfile
                 builder: ${{ steps.buildx.outputs.name }}
                 push: true
                 tags: dmac23/devops-project
