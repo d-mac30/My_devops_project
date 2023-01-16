@@ -3,7 +3,7 @@ services:
 # app  
   my-app:
     container_name: "my_eshop"
-    image: "my_docker1"
+    image: "my_docker1:latest"
     ports: "9091:9091"
     mem_limit: 1024m
     cpus: 1
@@ -12,7 +12,7 @@ services:
 # database
   wp-db:
     container_name: "my_postgres"
-    image: "postgres"
+    image: "postgres:latest"
     environment:
       - POSTGRES_USER=wp
       - POSTGRES_PASSWORD=wp123
