@@ -17,19 +17,23 @@ jobs:
             uses: actions/checkout@v3
           -
             name: Login to Docker Hub
-            uses: docker/login-action@v3
-            with:
+            env:
               username: ${{ secrets.DOCKER_HUB_USERNAME }}
               password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+              
+            run:
+              docker login -u $username -p $password
+         
           -
-            name: Set up Docker Buildx
-            uses: docker/setup-buildx-action@v3
+            name: Docker Image build
+            run: 
+              docker build . --file web/Dockerfile -t d-mac30/My_devops_project:$(date +%Y-%m-%d)
+              
           -
-            name: Build and push
-            uses: docker/build-push-action@v3
-            with:
-                context: ./
-                file: ./web/Dockerfile
-                builder: ${{ steps.buildx.outputs.name }}
-                push: true
-                tags: dmac23/devops-project:my_docker2
+            name: Docker Image push
+            run: 
+              docker push ${{secrets.DOCKERHUB_HUB_USERNAME}}/devops-project:$(date +%Y-%m-%d)
+              
+              
+              
+              
