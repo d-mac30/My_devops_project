@@ -27,7 +27,7 @@ jobs:
           -
             name: Docker Image build
             run: 
-              docker build . --file web/Dockerfile -t d-mac30/My_devops_project:$(date +%Y-%m-%d)
+              docker build . --file web/Dockerfile -t d-mac23/devops_project:$(date +%Y-%m-%d)
               
           -
             name: Docker Image push
