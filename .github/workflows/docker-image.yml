@@ -32,7 +32,7 @@ jobs:
           -
             name: Docker Image push
             run: 
-              docker push ${{secrets.DOCKER_HUB_USERNAME}}/devops-project:my-image1
+              docker push ${{ secrets.DOCKER_HUB_USERNAME }}/devops_project:my-image1
               
               
               
