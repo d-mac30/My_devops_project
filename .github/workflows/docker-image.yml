@@ -27,7 +27,7 @@ jobs:
           -
             name: Docker Image build
             run: 
-              docker build . --file web/Dockerfile -t d-mac30/my_devops_project:my-image1
+              docker build --file web/Dockerfile -t d-mac23/devops_project:my-image1
               
           -
             name: Docker Image push
