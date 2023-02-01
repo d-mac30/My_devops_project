@@ -3,9 +3,9 @@ services:
 # app  
   my-app:
     container_name: "my_eshop"
-    image: "my_docker1:latest"
+    image: "my-image1:latest"
     ports: "9091:9091"
-    mem_limit: 1024m
+    mem_limit: 512m
     cpus: 1
     
   
@@ -32,7 +32,7 @@ services:
       - prometheus-data:/prometheus
     restart: unless-stopped
     command:
-      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--config.file=./prometheus.yml"
     
 # grafana
   grafana:
