@@ -2,8 +2,8 @@ version: "3"
 services:
 # app  
   my-app:
-    container_name: "my_eshop"
-    image: "my-image1:latest"
+    container_name: my_eshop
+    image: my-image1:latest
     ports: "9091:9091"
     mem_limit: 512m
     cpus: 1
@@ -11,8 +11,8 @@ services:
   
 # database
   wp-db:
-    container_name: "my_postgres"
-    image: "postgres:latest"
+    container_name: my_postgres
+    image: postgres:latest
     environment:
       - POSTGRES_USER=wp
       - POSTGRES_PASSWORD=wp123
@@ -25,7 +25,7 @@ services:
 # prometheus  
   prometheus:
     container_name: prometheus
-    image: "prometheus:latest"
+    image: prom/prometheus:latest
     ports:
       - "9090:9090"
     volumes:
@@ -37,7 +37,7 @@ services:
 # grafana
   grafana:
     container_name: grafana
-    image: "grafana:latest"
+    image: grafana:latest
     ports:
       - "3000:3000"
     volumes:
