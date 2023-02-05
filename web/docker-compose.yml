@@ -31,8 +31,6 @@ services:
     volumes:
       - prometheus-data:/prometheus
     restart: unless-stopped
-    command:
-      - "--config.file=./prometheus.yml"
     
 # grafana
   grafana:
