@@ -4,7 +4,8 @@ services:
   my-app:
     container_name: my_eshop
     image: my-image1:latest
-    ports: "9091:9091"
+    ports: 
+      - "9091:9091"
     mem_limit: 512m
     cpus: 1
     
