@@ -1,1 +1,1 @@
-FROM openjdk:17-jdk-alpine
+FROM openjdk:12-jdk-alpine
