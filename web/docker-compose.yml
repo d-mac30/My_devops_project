@@ -6,8 +6,8 @@ services:
     image: my-image1:latest
     ports: 
       - "9091:9091"
-    mem_limit: 512m
-    cpus: 1
+    mem_limit: 256m
+    cpus: 0.5
     
   
 # database
@@ -20,6 +20,8 @@ services:
       - POSTGRES_DB=e-shop
     ports:
       - "5432:5432"
+    mem_limit: 256m
+    cpus: 0.5
     volumes:
       - postgres-data:/var/lib/postgresql/data
 
@@ -29,6 +31,8 @@ services:
     image: prom/prometheus:latest
     ports:
       - "9090:9090"
+    mem_limit: 256m
+    cpus: 0.5
     volumes:
       - prometheus-data:/prometheus
     restart: unless-stopped
@@ -39,6 +43,8 @@ services:
     image: grafana/grafana:latest
     ports:
       - "3000:3000"
+    mem_limit: 256m
+    cpus: 0.5
     volumes:
       - grafana-data:/var/lib/grafana
     restart: unless-stopped
