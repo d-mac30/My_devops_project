@@ -8,6 +8,7 @@ services:
       - "9091:9091"
     mem_limit: 256m
     cpus: 0.5
+    tty: true
     
   
 # database
