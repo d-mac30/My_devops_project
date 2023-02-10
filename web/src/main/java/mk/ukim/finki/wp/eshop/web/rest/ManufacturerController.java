@@ -8,8 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
-@RequestMapping("/api/manufacturers")
+@RequestMapping(value = "/api/manufacturers", method = RequestMethod.POST)
 public class ManufacturerController {
 
     private final ManufacturerService manufacturerService;
