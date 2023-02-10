@@ -5,7 +5,7 @@ services:
     container_name: my_eshop
     image: dmac23/devops_project:my-image1
     ports: 
-      - "9091:9091"
+      - "8080:8080"
     mem_limit: 256m
     cpus: 0.5
     tty: true
