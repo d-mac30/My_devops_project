@@ -27,10 +27,10 @@ jobs:
           -
             name: Docker Image build
             run: 
-              docker build . -f web/Dockerfile -t ${{ secrets.DOCKER_HUB_USERNAME }}/devops_project:my-image-$(date +%A-%B-%H-%M)
+              docker build . -f web/Dockerfile -t ${{ secrets.DOCKER_HUB_USERNAME }}/devops_project:my-image-$(date +%a-%b-%H-%M)
               
           -
             name: Docker Image push
             run: 
-              docker push ${{ secrets.DOCKER_HUB_USERNAME }}/devops_project:my-image-$(date +%A-%B-%H-%M)
+              docker push ${{ secrets.DOCKER_HUB_USERNAME }}/devops_project:my-image-$(date +%a-%b-%H-%M)
             
