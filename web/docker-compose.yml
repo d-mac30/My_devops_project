@@ -3,7 +3,7 @@ services:
 # app  
   my-app:
     container_name: my_eshop
-    image: dmac23/devops_project:latest
+    image: dmac23/devops_project:my-image-Sun-Feb-17-35
     ports: 
       - "8080:8080"
     mem_limit: 256m
