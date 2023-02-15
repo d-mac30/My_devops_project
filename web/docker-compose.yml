@@ -35,8 +35,11 @@ services:
     mem_limit: 256m
     cpus: 0.5
     volumes:
+      - /prometheus:/config
       - prometheus-data:/prometheus
     restart: unless-stopped
+    command:
+      - "--config.file=/config/prometheus.yml"
     
 # grafana
   grafana:
