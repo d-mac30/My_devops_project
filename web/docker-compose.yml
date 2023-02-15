@@ -39,7 +39,7 @@ services:
       - prometheus-data:/prometheus
     restart: unless-stopped
     command:
-      - "--config.file=/prometheus/prometheus.yml"
+      - "--config.file=./prometheus/prometheus.yml"
     
 # grafana
   grafana:
