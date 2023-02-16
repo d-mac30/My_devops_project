@@ -52,6 +52,20 @@ services:
     volumes:
       - grafana-data:/var/lib/grafana
     restart: unless-stopped
+    
+# cadvisor  
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:v0.45.0    
+    container_name: cadvisor
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:ro
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+      - /dev/disk/:/dev/disk:ro
+    devices:
+      - /dev/kmsg
+    restart: unless-stopped 
   
   
 volumes:
